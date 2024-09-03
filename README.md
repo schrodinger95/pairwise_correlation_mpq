@@ -20,7 +20,7 @@ conda env create -f environment.yml
 ```
 The first line of the yml file sets the new environment's name. 
 
-Activate the new environment: `conda activate myenv`
+Activate the new environment: `conda activate pairwise`
 
 ## Test Command Line
 To test the accuracy, BOPs, and latency for the mixed-precision quantized model, use the following command and adjust the attributes accordingly:
@@ -29,7 +29,7 @@ python3 run_test.py --dataset imagenet \
                     --data /path/to/imagenet/ \
                     --model mobilenetv2_w1 \
                     --limit bops \
-                    --limit_p 0.5 \
+                    --limit_p 0.6 \
                     --resume models/mobilenetv2_uniform8/checkpoint.pth.tar
 ```
 - `dataset`: `imagenet` or `cifar10`.
