@@ -263,8 +263,8 @@ if __name__ == '__main__':
     result['uniform']['acc'] = 100 * utils.test(uniform_model, test_loader)
     result['mixed']['acc'] = 100 * utils.test(quantized_model, test_loader)
 
-    print(f"8-bit Model:\n\tAcc: {result['uniform']['acc']:.2f}, BOPs: {result['uniform']['bops']:.2f}, latency: {result['uniform']['latency']:.2f}")
-    print(f"Mixed-Precision Model:\n\tAcc: {result['mixed']['acc']:.2f}, BOPs: {result['mixed']['bops']:.2f}, latency: {result['mixed']['latency']:.2f}")
+    print(f"8-bit Model:\n\tAcc: {result['uniform']['acc']:.2f}, BOPs: {result['uniform']['bops']:.2f}, latency: {result['uniform']['latency']:.2e}")
+    print(f"Mixed-Precision Model:\n\tAcc: {result['mixed']['acc']:.2f}, BOPs: {result['mixed']['bops']:.2f}, latency: {result['mixed']['latency']:.2e}")
     print(f"Accuracy degrade by {result['uniform']['acc'] - result['mixed']['acc']:.2f}%")
     print(f"BOPs improved by {(result['uniform']['bops'] - result['mixed']['bops']) / result['uniform']['bops'] * 100:.2f}%")
     print(f"latency improved by {(result['uniform']['latency'] - result['mixed']['latency']) / result['uniform']['latency'] * 100:.2f}%")
