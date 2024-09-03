@@ -57,7 +57,7 @@ python3 run_test.py --dataset imagenet \
                     --data /path/to/imagenet/ \
                     --model mobilenetv2_w1 \
                     --limit bops \
-                    --limit_p 0.5 \
+                    --limit_p 0.6 \
                     --resume models/mobilenetv2_uniform8/checkpoint.pth.tar
 ```
 
