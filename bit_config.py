@@ -200,7 +200,7 @@ bit_config = {
     'quant_output': 8
 },
 
-'mobilenetv2': {
+'mobilenetv2_w1': {
     "init_block" : 8,
     "quant_act_int32" : 16,
 
